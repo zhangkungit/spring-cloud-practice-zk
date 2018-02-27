@@ -13,11 +13,10 @@
 
 
     <dependencies>
-        <!-- yryz framework-->
-        <dependency>
+        <!--<dependency>
             <groupId>com.yryz.framework</groupId>
             <artifactId>core</artifactId>
-        </dependency>
+        </dependency>-->
 
         <!-- dubbo -->
         <dependency>
