@@ -19,6 +19,15 @@
     <properties>
         <java.version>1.8</java.version>
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+
+
+        <!-- 第三方依赖版本 -->
+        <dubbo.version>2.6.0</dubbo.version>
+        <dubbo.boot.version>1.0.0</dubbo.boot.version>
+        <elastic-job.version>2.1.5</elastic-job.version>
+        <pagehelper.boot.version>1.2.3</pagehelper.boot.version>
+        <mysql.driver.version>5.1.30</mysql.driver.version>
+        <druid.version>1.1.5</druid.version>
     </properties>
 
     <dependencyManagement>
@@ -29,6 +38,52 @@
                 <version>Dalston.SR1</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+
+            <dependency>
+                <groupId>io.dubbo.springboot</groupId>
+                <artifactId>spring-boot-starter-dubbo</artifactId>
+                <version>${dubbo.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+
+            <!-- mysql -->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>${pagehelper.boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.driver.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>net.logstash.logback</groupId>
+                <artifactId>logstash-logback-encoder</artifactId>
+                <version>4.11</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>2.7.0</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>2.7.0</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -48,6 +103,7 @@
         <module>provider</module>
         <module>consumer</module>
         <module>zipkin</module>
+        <module>framework</module>
     </modules>
 
     <repositories>
